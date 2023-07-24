@@ -13,20 +13,21 @@
         }
         .sidebar {
             background-color: #333;
-            height: 100vh;
         }
         .content {
             background-color: #e2e2e2;
-            height: calc(100vh - 56px);
         }
         .navbar {
             background-color: #333;
             border-bottom: 1px solid #444;
         }
+        .flex-column {
+            height: 100vh;
+        }
     </style>
 </head>
-<body class="container-fluid m-0 p-0">
-    <div class="row m-0">
+<body class="container-fluid m-0 p-0 d-flex flex-column">
+    <div class="row m-0 flex-grow-1">
         <div class="col-2 sidebar bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
             <ul class="list-group list-group-flush">
                 <li class="list-group-item bg-transparent">+</li>
@@ -35,8 +36,8 @@
                 <li class="list-group-item bg-transparent">3</li>
             </ul>
         </div>
-        <div class="col-10 p-0">
-            <nav class="navbar bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
+        <div class="col-10 p-0 d-flex flex-column">
+            <nav class="navbar bg-dark navbar-expand-md border-bottom border-bottom-dark" data-bs-theme="dark">
                 <div class="container-fluid">
                     <a class="navbar-brand text-white" href="#">Navbar</a>
                       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,10 +73,9 @@
                     </div>
                 </div>
             </nav>
-            <div class="content">
+            <div class="content flex-grow-1">
                 <!-- Rest of the content goes here... -->
             </div>
         </div>
     </div>
 </body>
-</html>
